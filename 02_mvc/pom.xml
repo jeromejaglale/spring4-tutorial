@@ -33,7 +33,13 @@
 			<artifactId>spring-webmvc</artifactId>
 			<version>${spring.version}</version>
 		</dependency>
-	 
+
+		<!-- JSTL -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
+		</dependency>	 
 	</dependencies>
 	 
 	<!-- boilerplate code so Maven can generate a .war archive without requiring a web.xml file -->

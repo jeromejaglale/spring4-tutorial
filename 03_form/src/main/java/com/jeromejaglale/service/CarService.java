@@ -32,4 +32,8 @@ public class CarService {
 	public List<Car> findAll() {
 		return carList;
 	}
+	
+	public void add(Car car) {
+		carList.add(car);
+	}
 }

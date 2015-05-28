@@ -5,7 +5,9 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.jeromejaglale.domain.Car;
 import com.jeromejaglale.service.CarService;
@@ -19,5 +21,15 @@ public class CarController {
 	public void carList(Model model) {
 		List<Car> carList = carService.findAll();
 		model.addAttribute("carList", carList);
+	}
+	
+	@RequestMapping("/car/add")
+	public void carList() {
+	}
+	
+	@RequestMapping(value="/car/add", method=RequestMethod.POST)
+	public String addUserSubmit(@ModelAttribute Car car) {
+		carService.add(car);
+		return "redirect:/car/list";
 	}
 }

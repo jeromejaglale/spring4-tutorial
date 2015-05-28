@@ -24,11 +24,11 @@ public class CarController {
 	}
 	
 	@RequestMapping("/car/add")
-	public void carList() {
+	public void carAdd() {
 	}
 	
 	@RequestMapping(value="/car/add", method=RequestMethod.POST)
-	public String addUserSubmit(@ModelAttribute Car car) {
+	public String carAddSubmit(@ModelAttribute Car car) {
 		carService.add(car);
 		return "redirect:/car/list";
 	}

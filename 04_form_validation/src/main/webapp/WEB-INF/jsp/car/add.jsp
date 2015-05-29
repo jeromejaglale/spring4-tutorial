@@ -6,7 +6,7 @@
 
 	<h1>Add a car</h1>
 
-	<form:form method="POST"  modelAttribute="car">
+	<form:form method="POST" modelAttribute="car">
 		<p>
 			Name:
 			<input type="text" name="name" />

@@ -12,7 +12,7 @@ import org.springframework.web.servlet.view.JstlView;
 @EnableWebMvc
 @ComponentScan(basePackages = {"com.jeromejaglale.service", "com.jeromejaglale.controller"})
 public class AppConfig {
-	@Bean
+    @Bean
     public ViewResolver jspViewResolver() {
         InternalResourceViewResolver resolver = new InternalResourceViewResolver();
         resolver.setViewClass(JstlView.class);
